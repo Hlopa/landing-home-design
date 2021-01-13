@@ -66,4 +66,10 @@ $('.header-slider').on('beforeChange', function(event, slick, currentSlide, next
    
   });
 
+  $('.project__slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+   })
+
+
  });
