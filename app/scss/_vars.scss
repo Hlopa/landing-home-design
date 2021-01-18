@@ -1,3 +1,12 @@
 $red: #e9212e;
 $red-hover: #8a0a13;
 $white-hover: rgb(175, 168, 168);
+$text-color: #27282c;
+
+@mixin back-pos {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+

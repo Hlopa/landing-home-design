@@ -10,6 +10,11 @@ html {
   *::after {
     box-sizing: inherit;
   }
+
+body{
+  color: $text-color;
+}
+
   
   ul, li {
     list-style: none;
@@ -27,3 +32,29 @@ html {
     margin: 0 auto;
     padding: 0 15px;
   }
+
+
+  .info-btn{
+  color: #fff;
+  font-size: 15px;
+  line-height: 57px;
+  font-weight: 500;
+  text-transform: capitalize;
+  background: $red;
+  padding: 0 52px 0 30px;
+  position: relative;
+  transition: all, 0.3s;
+  &:hover {
+    background: $red-hover;
+    color: $white-hover;
+  }
+  span:before{
+    position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 17%;
+  }
+  }
+
+
+    

@@ -138,13 +138,6 @@
   }
 }
 
-.icon-slider:after {
-  font-size: 20px;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 .container-dots {
   position: relative;
@@ -288,9 +281,9 @@
     
 }
 
-.icon-slider::before {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 17%;
-}
+// .icon-slider::before {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   right: 17%;
+// }
