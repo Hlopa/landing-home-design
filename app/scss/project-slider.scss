@@ -1,186 +1,184 @@
 .projects{
-    padding: 100px 0;
-  }
-  
-  
-  .projects__header__inner{
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-end;
-  }
-  
-  .main__title{
-    color:$red;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 500;
-      text-transform: uppercase;
-      margin: 0 0 7px;
-      padding-left: 35px;
-      position: relative;
-      &::before{
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        content: "";
-        height: 2px;
-        width: 30px;
-        position: absolute;
-        background-color: $red;
-      }
-  }
-  
-  
-  .main__subtitle{
-      font-size: 36px;
-      line-height: 44px;
-      font-weight: 700;
-      text-transform: uppercase;
-      
-    span{
-      font-weight: 400;
-      margin-left: 5px;
-    }
-  }
-  
-  
-  .projects__link{
-    position: relative;
-    padding-right: 25px;
-    color: $text-color;
-    font-family: 'Rubik', sans-serif;
-    font-size: 15px;
+  padding: 100px 0;
+}
+
+
+.projects__header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+
+.main__title{
+  color:$red;
+    font-size: 14px;
     line-height: 20px;
     font-weight: 500;
-    text-transform: capitalize;
-    span{
-    font-size: 20px;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    }
-  }
-  
-  .project__slider{
-    .slick-list{
-     padding-top: 100px;
-    
-    }
-    
-  }
-  
-  
-  .project__slider-item{
-    @include back-pos;
-    display: inline-block;
-    transition: all .5s;
-    &:hover{
-      .project__slider-item__inner{
-        background: rgba($color: #1C2121, $alpha: 0.6);
-      }
-      transform: translate(-20px, -20px);
-  }
-    }
-  
-  
-  .project__slider-item__inner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 500px;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+    padding-left: 35px;
     position: relative;
-    top: 0;
-    bottom: 0;
-    &:hover{
-      .project__slider-btn{
-        display: block;
-      }
-      .project__slider-title{
-        display: block;
-      }
-  
-      .project__slider-subtitle{
-        display: block;
-      }
-    }
-    
-  }
-  
-  
-  .project__slider-item{
-    
-    width: 250px !important;
-    position: relative;
-  }
-  
-  .project__slider-item{
-    box-shadow:7px 7px 10px 0px rgba(50, 50, 50, 0.80);
-  }
-  
-  .slick-slide:nth-child(4n + 1){
-    .project__slider-item{
-      margin-top: 30px;
-      
-    }
-  }
-  .slick-slide:nth-child(4n + 3){
-    .project__slider-item{
-      margin-top: 60px;
-    }
-  }
-  
-  .project__slider-btn{
-    display: none;
-    color: $text-color;
-    background-color: #fff;
-    &:hover{
+    &::before{
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      height: 2px;
+      width: 30px;
+      position: absolute;
       background-color: $red;
-      color: #fff;
+    }
+}
+
+
+.main__subtitle{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+  span{
+    font-weight: 400;
+    margin-left: 5px;
+  }
+}
+
+
+.projects__link{
+  position: relative;
+  padding-right: 25px;
+  color: $text-color;
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  span{
+  font-size: 20px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+}
+
+.project__slider{
+  .slick-list{
+   padding-top: 100px;
+  
+  }
+  
+}
+
+
+.project__slider-item{
+  @include back-pos;
+  display: inline-block;
+  transition: all .5s;
+  &:hover{
+    .project__slider-item__inner{
+      background: rgba($color: #1C2121, $alpha: 0.6);
+    }
+    transform: translate(-20px, -20px);
+}
+  }
+
+
+.project__slider-item__inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  &:hover{
+    .project__slider-btn{
+      display: block;
+    }
+    .project__slider-title{
+      display: block;
+    }
+
+    .project__slider-subtitle{
+      display: block;
     }
   }
   
-  .project__slider-title{
-    display: none;
-    margin-top: 20px;
-    color: #c8cbd1;
+}
+
+
+.project__slider-item{
+  width: 110% !important;
+  position: relative;
+}
+
+.project__slider-item{
+  box-shadow:7px 7px 10px 0px rgba(50, 50, 50, 0.80);
+}
+
+.slick-slide:nth-child(4n + 1){
+  .project__slider-item{
+    margin-top: 30px;
+    
   }
-  
-  .project__slider-subtitle{
-    display: none;
-    margin-top: 5px;
-    font-weight: 600;
-    font-size: 20px;
+}
+.slick-slide:nth-child(4n + 3){
+  .project__slider-item{
+    margin-top: 60px;
+  }
+}
+
+.project__slider-btn{
+  display: none;
+  color: $text-color;
+  background-color: #fff;
+  &:hover{
+    background-color: $red;
     color: #fff;
   }
-  
-  
-  .project__slider{
-    .slick-dots{
-      padding-top: 30px;
-      text-align: center;
-      li{
-        display: inline-block;
-        font-size: 0;
-        button{
-          background-color: rgb(202, 199, 199);
-          border: none;
-          margin-left: 5px;
-          width: 60px;
-          height: 5px;
-          &:focus{
-            outline: $red;
-          }
+}
+
+.project__slider-title{
+  display: none;
+  margin-top: 20px;
+  color: #c8cbd1;
+}
+
+.project__slider-subtitle{
+  display: none;
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+.project__slider{
+  .slick-dots{
+    padding-top: 30px;
+    text-align: center;
+    li{
+      display: inline-block;
+      font-size: 0;
+      button{
+        background-color: rgb(202, 199, 199);
+        border: none;
+        margin-left: 5px;
+        width: 60px;
+        height: 5px;
+        &:focus{
+          outline: $red;
         }
-      
       }
-      .slick-active{
-        button{
-          background-color: $red;
-        }
+    
+    }
+    .slick-active{
+      button{
+        background-color: $red;
       }
     }
   }
-  
-  
+}
+
