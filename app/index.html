@@ -343,7 +343,6 @@
       <div class="main__subtitle">Свяжитесь с нами<span>по любому вопросу</span></div>
       <div class="contacts__map">
         <div class="contacts__map-item contacts__map-item--1">
-
           <div class="contacts__map-marker"></div>
           <div class="contacts__map-content">
             <div class="contacts__map-content-title">Нью-Йорк</div>
@@ -394,7 +393,20 @@
           </div>
         </div>
       </div>
-      <form class="contact-form"></form>
+      <div class="contact-form">
+        <div class="contact-form__title">Форма обратной связи</div>
+        <div class="contact-form__text">
+          Оставьте ваши контактные данные и наши эксперты свяжутся с вами в течение 24 часов
+        </div>
+        <form class="form">
+          <input class="form__name form__item" type="text" placeholder="Имя" required>
+          <input class="form__email form__item" type="text" placeholder="Email" required>
+          <textarea class="form__message form__item" name="message" id="message" cols="30" rows="7"
+            placeholder="Напишите свой вопрос..."></textarea>
+          <button class="form__btn info-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+
 
     </div>
   </section>
