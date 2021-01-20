@@ -9,6 +9,7 @@
   "author": "Hlopa",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.1",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
@@ -23,6 +24,7 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-html": "^1.0.2",
     "jquery": "^3.5.1",
+    "lightbox2": "^2.11.3",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   },

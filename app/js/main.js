@@ -73,6 +73,15 @@ $(function () {
     dots: true
   })
 
+
+  $('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+
 });
 
 //скролл и анимация
@@ -86,6 +95,10 @@ let mapItem4 = firstBox.querySelector('.contacts__map-item--4').querySelector('.
 let mapItem5 = firstBox.querySelector('.contacts__map-item--5').querySelector('.contacts__map-marker');
 let contactForm = firstBox.querySelector('.contact-form');
 
+let aboutUs = document.querySelector('.about-us');
+let aboutUs1 = aboutUs.querySelector('.about-us__images--1');
+let aboutUs2 = aboutUs.querySelector('.about-us__images--2');
+
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
@@ -98,11 +111,11 @@ function throttleScroll(e) {
   isScrolling = true;
 }
 
-function isPartiallyVisible(el) {
+function isPartiallyVisible(el, num) {
   let elementBoundary = el.getBoundingClientRect();
-  let top = elementBoundary.top - 200;
+  let top = elementBoundary.top - num;
   let bottom = elementBoundary.bottom;
-  let height = elementBoundary.height - 200;
+  let height = elementBoundary.height - num;
   return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
 
@@ -117,7 +130,7 @@ function addClasses(elem, arr) {
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function scrolling(e) {
-  if (isPartiallyVisible(firstBox)) {
+  if (isPartiallyVisible(firstBox, 200)) {
     addClasses(mapItem1, ['animate__animated', 'animate__fadeIn', 'animate__delay-1s', 'animate__slow']);
     addClasses(mapItem2, ['animate__animated', 'animate__fadeIn', 'animate__delay-2s', 'animate__slow']);
     addClasses(mapItem3, ['animate__animated', 'animate__fadeIn', 'animate__delay-3s', 'animate__slow']);
@@ -125,4 +138,12 @@ function scrolling(e) {
     addClasses(mapItem5, ['animate__animated', 'animate__fadeIn', 'animate__delay-5s', 'animate__slow']);
     addClasses(contactForm, ['animate__animated', 'animate__bounceInRight', 'animate__delay-3s']);
   }
+  
+  if (isPartiallyVisible(aboutUs, 50)) {
+    addClasses(aboutUs1, ['animate__animated', 'animate__fadeInUp']);
+    addClasses(aboutUs2, ['animate__animated', 'animate__fadeInRight', 'animate__delay-1s']);
+  }
+
 }
+
+

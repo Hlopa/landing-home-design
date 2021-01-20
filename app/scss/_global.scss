@@ -3,6 +3,7 @@ html {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 25px;
   }
   
   *,
@@ -35,11 +36,11 @@ body{
 
 
   .info-btn{
+  font-family: 'Caveat', cursive;
   color: #fff;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 57px;
-  font-weight: 500;
-  text-transform: capitalize;
+  font-weight: 400;
   background: $red;
   padding: 0 52px 0 30px;
   position: relative;
@@ -49,10 +50,10 @@ body{
     color: $white-hover;
   }
   span:before{
-    position: absolute;
-  top: 50%;
+  position: absolute;
+  top: 53%;
   transform: translateY(-50%);
-  right: 17%;
+  right: 10%;
   }
   }
 
