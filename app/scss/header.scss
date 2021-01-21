@@ -239,7 +239,7 @@
       display: block;
       font-size: 15px;
       line-height: 14px;
-      padding-top: 6px;
+      padding-top: 4px;
       margin-bottom: 32px;
       transition: all, 0.3s;
     }
@@ -264,9 +264,10 @@
   }
   li{
     span{
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 15px;
-      letter-spacing: 1.5px;
+      font-family: 'Rubik', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      font-weight: 300;
     }
   }
   &::before{
@@ -290,7 +291,7 @@
     position: absolute;
     content: "";
     width: 1px;
-    height: 140px;
+    height: 90px;
     background-color: rgb(199, 191, 191);
   }
 }

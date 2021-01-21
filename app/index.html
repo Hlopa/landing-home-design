@@ -228,6 +228,46 @@
     </div>
   </section>
 
+  <section class="price">
+    <div class="container">
+      <div class="price__inner">
+        <div class="price__calc">
+          <div class="price__title">
+            <div class="main__title">Стоимость</div>
+            <div class="main__subtitle">Рассчитайте<span>примерную стоимость</span></div>
+          </div>
+          <div class="price__box">
+            <select class="price__item prise__select" required>
+              <option class="price__select-title" value="">Выберите тип объекта*</option>
+              <option value="1">Интерьер квартиры</option>
+              <option value="1.4">Интерьер частного дома</option>
+              <option value="2">Интерьер офиса</option>
+            </select>
+            <input type="text" min="1" step="1" class="price__item price-square" placeholder="Общая площадь*">
+            <input type="text" min="1" step="1" class="price__item price-count" placeholder="Количество помещений">
+            <input type="text" min="1" step="1" class="price__item price-day" placeholder="Срок исполнения (в днях)">
+            <div class="price__total">ИТОГО: <span id="total">0</span></div>
+            <div class="price__mini">* стоимость по умолчанию расчитывается на 1 помещение и срок 10 дней <br>
+              **точная стоимость и сроки работ обговариваются индивидуально, после
+              ознакомления с техническим заданием.
+            </div>
+          </div>
+        </div>
+        <div class="price__question">
+          <div class="price__question-block animate__shakeY animate__animated animate__infinite">
+            <span class="price__question-icon icon-paste"></span>
+            <div class="price__question-title">Остались вопросы?</div>
+            <div class="price__question-text">
+              Свяжитесь с нами по телефону горячей линии <a class="price__question-phone" href="tel:+79115730053"> +7
+                911-573-0053</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section class='projects'>
     <div class="container">
       <div class="projects__header__inner">
@@ -378,6 +418,7 @@
     <div class="container">
       <div class="main__title">Наши контакты</div>
       <div class="main__subtitle">Свяжитесь с нами<span>по любому вопросу</span></div>
+    </div>
       <div class="contacts__map">
         <div class="contacts__map-item contacts__map-item--1">
           <div class="contacts__map-marker"></div>

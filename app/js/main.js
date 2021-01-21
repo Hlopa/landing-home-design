@@ -75,12 +75,12 @@ $(function () {
 
 
   $('.fancybox-media').fancybox({
-		openEffect  : 'none',
-		closeEffect : 'none',
-		helpers : {
-			media : {}
-		}
-	});
+    openEffect: 'none',
+    closeEffect: 'none',
+    helpers: {
+      media: {}
+    }
+  });
 
 });
 
@@ -138,7 +138,7 @@ function scrolling(e) {
     addClasses(mapItem5, ['animate__animated', 'animate__fadeIn', 'animate__delay-5s', 'animate__slow']);
     addClasses(contactForm, ['animate__animated', 'animate__bounceInRight', 'animate__delay-3s']);
   }
-  
+
   if (isPartiallyVisible(aboutUs, 50)) {
     addClasses(aboutUs1, ['animate__animated', 'animate__fadeInUp']);
     addClasses(aboutUs2, ['animate__animated', 'animate__fadeInRight', 'animate__delay-1s']);
@@ -147,3 +147,77 @@ function scrolling(e) {
 }
 
 
+//калькулятор
+
+const calc = (price = 100) => {
+  const priceSection = document.querySelector('.price'),
+    calcBlock = priceSection.querySelector('.price__box'),
+    calcType = priceSection.querySelector('.prise__select'),
+    calcSquare = priceSection.querySelector('.price-square'),
+    calcDay = priceSection.querySelector('.price-day'),
+    calcCount = priceSection.querySelector('.price-count'),
+    totalValue = document.getElementById('total');
+
+  const correctNum = (selector) => {
+    selector.addEventListener('input', (e) => {
+      const target = e.target;
+      if (target.tagName === "INPUT") {
+        target.value = target.value.replace(/[^\+?0-9\.]/g, '')
+      }
+    })
+  };
+
+  correctNum(calcBlock);
+
+  const countSum = () => {
+    let total = 0,
+      countValue = 1,
+      dayValue = 1;
+    const typeValue = calcType.options[calcType.selectedIndex].value,
+      squareValue = +calcSquare.value;
+    if (calcCount.value > 1) {
+      countValue += (calcCount.value - 1) / 10;
+    }
+    if (calcDay.value && calcDay.value < 5) {
+      dayValue *= 2;
+    } else if (calcDay.value && calcDay.value < 10) {
+      dayValue *= 1.5;
+    }
+    if (typeValue && squareValue) {
+      total = parseInt(price * typeValue * squareValue * countValue * dayValue);
+    }
+
+    const animateTotal = () => {
+      const target = +total;
+      const count = +totalValue.textContent;
+      let speed = 20;
+      if (target > 5000 && target < 30000) {
+        speed = 50
+      } else if (target >= 30000 && target < 100000) {
+        speed = 200
+      } else if (target >= 100000) {
+        speed = 4000
+      }
+
+      if (count < target) {
+        totalValue.textContent = count + speed;
+        setTimeout(animateTotal, 1)
+      } else if (count > target + 50) {
+        totalValue.textContent = count - speed;
+        setTimeout(animateTotal, 1)
+      } else {
+        totalValue.textContent = total;
+      }
+    }
+    animateTotal()
+  };
+
+  calcBlock.addEventListener('change', (e) => {
+    const target = e.target;
+    if (target.matches('select') || target.matches('input')) {
+      countSum();
+    }
+  })
+};
+
+calc(100);
