@@ -99,6 +99,10 @@ let aboutUs = document.querySelector('.about-us');
 let aboutUs1 = aboutUs.querySelector('.about-us__images--1');
 let aboutUs2 = aboutUs.querySelector('.about-us__images--2');
 
+let workStep = document.querySelector('.work-step');
+let workStepTitle = workStep.querySelector('.work-step__title');
+let workStepInner = workStep.querySelector('.work-step__inner');
+
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
@@ -142,6 +146,12 @@ function scrolling(e) {
   if (isPartiallyVisible(aboutUs, 50)) {
     addClasses(aboutUs1, ['animate__animated', 'animate__fadeInUp']);
     addClasses(aboutUs2, ['animate__animated', 'animate__fadeInRight', 'animate__delay-1s']);
+  }
+
+
+  if (isPartiallyVisible(workStep, 80)) {
+    addClasses(workStepTitle, ['animate__animated', 'animate__fadeInLeft']);
+    addClasses(workStepInner, ['animate__animated', 'animate__bounceInUp', 'animate__delay-1s']);
   }
 
 }
