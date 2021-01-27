@@ -121,7 +121,7 @@
 }
 
 .header-slider__item-360 {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   position: relative;
   margin-left: 35px;
   transition: all, 0.3s;
@@ -138,7 +138,6 @@
     color: $white-hover;
   }
 }
-
 
 .container-dots {
   position: relative;
@@ -254,23 +253,22 @@
   }
 }
 
-
-
 .menu__list {
   text-align: center;
-  img{
-      width: 37px;
-      height: auto;
+  img {
+    width: 37px;
+    height: auto;
   }
-  li{
-    span{
-      font-family: 'Rubik', sans-serif;
+  li {
+    span {
+      font-family: "Rubik", sans-serif;
       font-size: 14px;
       letter-spacing: 0.5px;
-      font-weight: 300;
+      font-weight: 400;
+      color: rgba($color: rgb(236, 230, 230), $alpha: 0.8);
     }
   }
-  &::before{
+  &::before {
     top: 20px;
     transform: translateX(50%);
     right: 50%;
@@ -284,22 +282,11 @@
 
 .header__search {
   padding-top: 20px;
-  &::after{
-    bottom: 12%;
-    transform: translateX(50%);
-    right: 50%;
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 90px;
-    background-color: rgb(199, 191, 191);
-  }
 }
 
-.header__arrows{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+.header__arrows {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

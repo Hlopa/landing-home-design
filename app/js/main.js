@@ -103,6 +103,11 @@ let workStep = document.querySelector('.work-step');
 let workStepTitle = workStep.querySelector('.work-step__title');
 let workStepInner = workStep.querySelector('.work-step__inner');
 
+let offers = document.querySelector('.offers');
+let offersTitle = offers.querySelector('.offers__title');
+let offersText = offers.querySelector('.offers__text');
+let offersList = offers.querySelector('.offers__list');
+
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
@@ -152,6 +157,12 @@ function scrolling(e) {
   if (isPartiallyVisible(workStep, 80)) {
     addClasses(workStepTitle, ['animate__animated', 'animate__fadeInLeft']);
     addClasses(workStepInner, ['animate__animated', 'animate__bounceInUp', 'animate__delay-1s']);
+  }
+
+  if (isPartiallyVisible(offers, 80)) {
+    addClasses(offersTitle, ['animate__animated', 'animate__fadeInLeft']);
+    addClasses(offersText, ['animate__animated', 'animate__fadeInLeft']);
+    addClasses(offersList, ['animate__animated', 'animate__bounceInUp', 'animate__delay-1s']);
   }
 
 }

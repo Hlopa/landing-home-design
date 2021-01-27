@@ -1,0 +1,124 @@
+.offers {
+    background: linear-gradient(
+        180deg,
+        rgba(73, 72, 72, 0.6) 0,
+        rgba(40, 41, 39, 0.7) 80%,
+        rgba(73, 72, 72, 0.5) 100%
+      ),
+      url(../images/offers-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .offers__inner {
+    padding: 100px 0px;
+    text-align: center;
+  }
+  
+  .offers__title {
+    margin-bottom: 25px;
+  }
+  
+  .offers__text {
+    max-width: 82%;
+    margin: 0 auto;
+    color: rgba($color: #fff, $alpha: 0.6);
+    margin-bottom: 40px;
+  }
+  
+  .offers__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .offers-item {
+    transition: all, 0.5s;
+    height: 500px;
+    flex: 0 0 23%;
+    background-color: #fff;
+    padding: 60px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover {
+      box-shadow: 0 8px 10px 3px #312f2f;
+      transform: scale(1.1);
+    }
+  }
+  
+  .offers-item__header {
+    font-size: 24px;
+    font-weight: 600;
+    color: $red;
+    span {
+      color: $text-color;
+      font-size: 40px;
+      padding-top: 15px;
+      display: block;
+    }
+  }
+  
+  .offers-item__list-item {
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .offers-item__link {
+    background-color: rgb(173, 162, 162);
+    span::before {
+      right: 14%;
+    }
+  }
+  
+  .offers--popular {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        180deg,
+        rgba(43, 42, 42, 0.75) 0,
+        rgba(35, 36, 35, 0.75) 80%,
+        rgba(49, 48, 48, 0.75) 100%
+      ),
+      url(../images/offers-popular.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    .offers-item__header {
+      span {
+        color: #fff;
+      }
+    }
+    .offers-item__list-item {
+      border-bottom: 1px solid rgba(185, 180, 180, 0.3);
+    }
+    .offers-item__link {
+      background-color: $red;
+      &:hover {
+        background-color: $red-hover;
+      }
+    }
+  }
+  
+  .offers--popular-triangle {
+    transform: rotate(45deg);
+    position: absolute;
+    top: -22px;
+    right: -56px;
+    width: 147px;
+    background-color: #e9212e;
+    background-color: $red;
+    height: 80px;
+    span {
+      font-family: "Raleway";
+      display: block;
+      margin-top: 52px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+  
