@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?8h7c6r');
-  src:  url('../fonts/icomoon.eot?8h7c6r#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?8h7c6r') format('truetype'),
-    url('../fonts/icomoon.woff?8h7c6r') format('woff'),
-    url('../fonts/icomoon.svg?8h7c6r#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?udb50c');
+  src:  url('../fonts/icomoon.eot?udb50c#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?udb50c') format('truetype'),
+    url('../fonts/icomoon.woff?udb50c') format('woff'),
+    url('../fonts/icomoon.svg?udb50c#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-credit-card:before {
+  content: "\f09d";
+}
 .icon-caret-right:before {
   content: "\f0da";
+}
+.icon-line-chart:before {
+  content: "\f201";
 }
 .icon-pinterest-p:before {
   content: "\f231";
@@ -37,6 +43,9 @@
 .icon-shopping-basket:before {
   content: "\f291";
 }
+.icon-address-book-o:before {
+  content: "\f2ba";
+}
 .icon-long-arrow-right:before {
   content: "\e900";
 }
@@ -45,6 +54,9 @@
 }
 .icon-paste:before {
   content: "\e92d";
+}
+.icon-clock:before {
+  content: "\e94e";
 }
 .icon-facebook:before {
   content: "\ea90";

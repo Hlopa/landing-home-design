@@ -1,0 +1,42 @@
+.advantages {
+    color: #fff;
+    background-color: rgb(185, 153, 153);
+    padding: 80px 0px;
+  }
+  
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px -40px 0px 40px;
+  }
+  
+  .advantages__item {
+    position: relative;
+    flex: 0 0 21%;
+  }
+  
+  .advantages__item-title {
+    padding-left: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    max-width: 80%;
+  }
+  
+  .advantages__item-link {
+    padding-left: 30px;
+    color: #fff;
+    font-family: "Caveat", sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+  }
+  
+  .advantages__item-icon::before {
+    position: absolute;
+    left: -32px;
+    top: -8px;
+    font-size: 45px;
+  }
+  

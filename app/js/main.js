@@ -108,6 +108,13 @@ let offersTitle = offers.querySelector('.offers__title');
 let offersText = offers.querySelector('.offers__text');
 let offersList = offers.querySelector('.offers__list');
 
+let advantages = document.querySelector('.advantages');
+let advantagesItem1 = advantages.querySelector('.advantages__list-item--1');
+let advantagesItem2 = advantages.querySelector('.advantages__list-item--2');
+let advantagesItem3 = advantages.querySelector('.advantages__list-item--3');
+let advantagesItem4 = advantages.querySelector('.advantages__list-item--4');
+
+
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
@@ -163,6 +170,13 @@ function scrolling(e) {
     addClasses(offersTitle, ['animate__animated', 'animate__fadeInLeft']);
     addClasses(offersText, ['animate__animated', 'animate__fadeInLeft']);
     addClasses(offersList, ['animate__animated', 'animate__bounceInUp', 'animate__delay-1s']);
+  }
+
+  if (isPartiallyVisible(advantages, 0)) {
+    addClasses(advantagesItem1, ['animate__animated', 'animate__fadeInLeftBig', 'animate__delay-3s']);
+    addClasses(advantagesItem2, ['animate__animated', 'animate__fadeInLeftBig', 'animate__delay-2s']);
+    addClasses(advantagesItem3, ['animate__animated', 'animate__fadeInLeftBig', 'animate__delay-1s']);
+    addClasses(advantagesItem4, ['animate__animated', 'animate__fadeInLeftBig']);
   }
 
 }
