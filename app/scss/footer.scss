@@ -1,0 +1,151 @@
+.footer {
+    background-color: rgb(170, 155, 155);
+    color: #fff;
+  }
+  
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0px 80px;
+  }
+  
+  .footer__copy {
+    border-top: 1px solid #d7dadb;
+  }
+  
+  .footer__copy-text {
+    text-align: center;
+    color: #d7dadb;
+    padding: 25px 0px;
+  }
+  
+  .footer__col {
+    flex: 0 0 22%;
+  }
+  
+  .footer__col-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 2px;
+      width: 51px;
+      height: 3px;
+      background-color: $red;
+    }
+  }
+  
+  .footer__col-text {
+    line-height: 22px;
+    color: #d7dadb;
+    margin-bottom: 30px;
+  }
+  
+  .footer__col-info {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 18px;
+    font-weight: 500;
+    padding-left: 30px;
+    color: #fff;
+    position: relative;
+    &::before {
+      content: "\f041";
+      font-family: "icomoon";
+      color: $red;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+    }
+  }
+  
+  .footer__info-phone {
+    &::before {
+      content: "\f095";
+    }
+  }
+  
+  .footer__col-list {
+    a {
+      margin-bottom: 13px;
+      color: #d7dadb;
+      padding-left: 22px;
+      position: relative;
+      &::before {
+        content: "\f0da";
+        font-family: "icomoon";
+        color: $red;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+      }
+    }
+  }
+  
+  .footer__social-link {
+    margin-bottom: 33px;
+    li {
+      display: inline-block;
+      & + li {
+        margin-left: 5px;
+      }
+    }
+    a {
+      text-align: center;
+      &::before {
+        color: rgb(231, 227, 227);
+      }
+    }
+  }
+  
+  .footer__form-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .footer__form {
+    position: relative;
+    input {
+      border: none;
+      background-color: #2f3c43;
+      display: block;
+      width: 100%;
+      height: 50px;
+      color: #697378;
+      font-size: 14px;
+      padding-left: 13px;
+      padding-right: 50px;
+      &::placeholder {
+        color: #697378;
+      }
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $red;
+      border: none;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        font-family: "icomoon";
+        content: "\f072";
+        color: #fff;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  
