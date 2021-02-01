@@ -256,3 +256,31 @@ const calc = (price = 100) => {
 };
 
 calc(100);
+
+
+
+//плавный скролл
+
+const getSmoothScroll = () => {
+  const menu = document.querySelector('.menu'),
+    ancors = menu.querySelector('ul').querySelectorAll('a'),
+    btnDown = document.querySelector('.header__arrows-btn');
+
+  const getScroll = (element) => {
+    element.addEventListener('click', function (e) {
+      e.preventDefault();
+      const blockID = element.getAttribute('href');
+      document.querySelector('' + blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  }
+
+  ancors.forEach((item) => {
+    getScroll(item)
+  });
+  getScroll(btnDown);
+}
+
+getSmoothScroll();
