@@ -320,3 +320,14 @@ const togglePopup = () => {
 
 }
 togglePopup();
+
+
+let headerBurger = document.querySelector('.header__burger');
+let menuList = document.querySelector('.menu__list');
+
+
+headerBurger.addEventListener('click', () => {
+  headerBurger.classList.toggle('header__burger--active');
+  menuList.classList.toggle('menu__list--open');
+
+})
