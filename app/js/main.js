@@ -284,3 +284,39 @@ const getSmoothScroll = () => {
 }
 
 getSmoothScroll();
+
+
+//popup
+
+const togglePopup = () => {
+  const popup = document.querySelector('.popup'),
+    popupBtns = document.querySelectorAll('.offers-item__link'),
+    popupClose = document.querySelector('.popup-close');
+
+
+  popupBtns.forEach((elem) => {
+    elem.addEventListener('click', (e) => {
+      e.preventDefault();
+      popup.style.display = 'block';
+    })
+  });
+
+  popupClose.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+
+  popup.addEventListener('click', (event) => {
+    let target = event.target;
+    if (target.classList.contains('popup-close')) {
+      popup.style.display = 'none'
+    } else {
+      target = target.closest('.popup-content');
+      if (!target) {
+        popup.style.display = 'none';
+      }
+    }
+  })
+
+}
+togglePopup();
