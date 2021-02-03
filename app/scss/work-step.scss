@@ -122,3 +122,56 @@
   font-size: 80px;
   line-height: 80px;
 }
+
+@media (max-width: 950px) {
+  .work-step__inner {
+    flex-direction: column;
+  }
+
+  .work-step__item {
+    padding: 46px 30px 24px;
+    & + & {
+      margin-top: 45px;
+    }
+  }
+
+  .work-step__item-number span {
+    font-size: 23px;
+    line-height: 70px;
+  }
+  .work-step__item-number {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+  }
+  .work-step__item-title {
+    margin-bottom: 11px;
+  }
+
+  .work-step__item-text {
+    margin-bottom: 16px;
+  }
+
+  .work-step__item-icon::before {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 610px) {
+  .work-step {
+    padding: 80px 0;
+  }
+
+  .work-step__title {
+    margin-bottom: 64px;
+  }
+}
+
+@media (max-width: 380px) {
+  .work-step {
+    padding: 50px 0;
+  }
+  .work-step__title {
+    margin-bottom: 52px;
+  }
+}
