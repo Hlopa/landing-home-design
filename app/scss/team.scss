@@ -1,98 +1,170 @@
 .team {
-    padding: 150px 0px;
+  padding: 150px 0px;
+}
+
+.team__inner {
+  display: flex;
+}
+
+.team__number {
+  position: relative;
+  z-index: 10;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+  padding: 0 60px;
+  background-color: #27282c;
+  &::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    background-image: url(../images/plan-right.png);
   }
-  
+}
+
+.team__number-text {
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  span {
+    line-height: normal;
+    font-size: 254px;
+    font-weight: 700;
+  }
+  p {
+    margin: 0;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+  }
+}
+
+.team__box {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.team__box-item {
+  position: relative;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  transition: all 1s;
+  img {
+    transition: all ease-in 0.5s;
+    width: 100%;
+    display: block;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(100%);
+  }
+  &:hover {
+    img {
+      filter: grayscale(0%);
+    }
+    .team__img-figcaption {
+      display: block;
+    }
+  }
+}
+
+.team__img-figcaption {
+  transition: all 1s;
+  display: none;
+  font-family: Caveat;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  padding: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba($color: #e9212e, $alpha: 0.5);
+  // background-color: rgba(141, 73, 73, 0.6);
+  span {
+    display: block;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1010px) {
+  .team {
+    padding: 130px 0;
+  }
   .team__inner {
     display: flex;
+    flex-direction: column;
   }
-  
   .team__number {
-    position: relative;
-    z-index: 10;
-    flex: 0 0 41.666667%;
-    max-width: 41.666667%;
-    padding: 0 60px;
-    background-color: #27282c;
-    &::after {
-      z-index: 1;
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 80%;
-      background-image: url(../images/plan-right.png);
-    }
+    max-width: 100%;
   }
-  
-  .team__number-text {
-    position: relative;
-    z-index: 100;
-    color: #fff;
-    span {
-      line-height: normal;
-      font-size: 254px;
-      font-weight: 700;
-    }
-    p {
-      margin: 0;
-      font-size: 32px;
-      line-height: 42px;
-      font-weight: 700;
-    }
-  }
-  
+
   .team__box {
-    flex: 0 0 58.333333%;
-    max-width: 58.333333%;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
+    max-width: 100%;
   }
-  
+  .team__number-text span {
+    font-size: 140px;
+  }
+  .team__number-text p {
+    margin-bottom: 20px;
+  }
+
+  .team__box-item img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 750px) {
+  .team {
+    padding: 80px 0;
+  }
+  .team__number {
+    padding: 0 30px;
+  }
+  .team__number-text p {
+    font-size: 29px;
+    line-height: 38px;
+  }
   .team__box-item {
-    position: relative;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    transition: all 1s;
-    img {
-      transition: all ease-in 0.5s;
-      width: 100%;
-      display: block;
-      height: 250px;
-      object-fit: cover;
-      object-position: top;
-      filter: grayscale(100%);
-    }
-    &:hover {
-      img {
-        filter: grayscale(0%);
-      }
-      .team__img-figcaption {
-        display: block;
-      }
-    }
+    flex: 0 0 50%;
+    max-width: 50%;
   }
-  
-  .team__img-figcaption {
-    transition: all 1s;
-    display: none;
-    font-family: Caveat;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: center;
-    color: #fff;
-    padding: 8px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba($color: #e9212e, $alpha: 0.5);
-    // background-color: rgba(141, 73, 73, 0.6);
-    span {
-      display: block;
-      font-weight: 400;
-    }
+}
+
+@media (max-width: 510px) {
+  .team__box-item img {
+    height: 200px;
   }
-  
+}
+
+@media (max-width: 400px) {
+  .team {
+    padding: 50px 0;
+  }
+  .team__number {
+    padding: 0 20px;
+  }
+  .team__number-text span {
+    font-size: 95px;
+  }
+  .team__number-text p {
+    font-size: 21px;
+    line-height: 26px;
+  }
+  .team__number::after {
+    width: 119%;
+  }
+
+  .team__box-item img {
+    height: 143px;
+  }
+}
