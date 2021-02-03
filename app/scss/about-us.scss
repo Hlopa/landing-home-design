@@ -4,15 +4,12 @@
 
 .about-us__inner {
   display: flex;
-  margin-right: -40px;
-  margin-left: -40px;
+  justify-content: space-between;
 }
 
 .about-us__graphic,
 .about-us__descr {
-  flex: 0 0 50%;
-  padding-right: 40px;
-  padding-left: 40px;
+  flex: 0 0 45%;
 }
 
 .about-us__graphic {
@@ -129,5 +126,151 @@
   &:hover {
     transform: translateY(5px);
     box-shadow: 0 0 25px rgba(224, 85, 85, 0.5);
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-us__video {
+    bottom: -10px;
+    right: -21px;
+    padding: 32px 51px 25px;
+  }
+
+  .about-us__video-text {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-us {
+    padding: 130px 0 130px;
+  }
+
+  .about-us__inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-us__graphic,
+  .about-us__descr {
+    width: 100%;
+  }
+
+  .about-us__graphic {
+    margin-bottom: 40px;
+  }
+
+  .main__subtitle {
+    font-size: 33px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 550px) {
+  .about-us {
+    padding: 100px 0px;
+  }
+  .about-us__video {
+    bottom: unset;
+    right: unset;
+    position: relative;
+    width: 95%;
+    padding: 19px 51px 20px;
+  }
+  .about-us__img .about-us__images--1 {
+    margin-right: 11px;
+  }
+  .about-us__img {
+    margin-bottom: 20px;
+  }
+
+  .about-us__video-text {
+    line-height: 20px;
+  }
+
+  .about-us__watch::before {
+    left: 92%;
+    width: 105px;
+  }
+
+  .about-us__video-link {
+    left: 127px;
+  }
+  .about-us__video-player {
+    margin-top: -10px;
+  }
+
+  .main__subtitle {
+    font-size: 27px;
+    line-height: 35px;
+  }
+  .about-us__text {
+    line-height: 24px;
+  }
+  .about-us__social-box {
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-us {
+    padding: 50px 0;
+  }
+  .about-us__img .about-us__images--1 {
+    margin-right: 0px;
+  }
+
+  .about-us__img {
+    justify-content: space-between;
+  }
+  .about-us__video-text {
+    display: none;
+  }
+
+  .about-us__video {
+    bottom: unset;
+    right: unset;
+    position: relative;
+    width: 43%;
+    padding: 0px 14px 5px;
+  }
+
+  .about-us__watch {
+    display: none;
+  }
+  .about-us__video-link {
+    left: 68px;
+  }
+
+  .about-us__video {
+    box-shadow: none;
+    bottom: 20px;
+    right: 0;
+    position: absolute;
+    width: 48%;
+    padding: 0 14px 5px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 57%;
+      height: 2px;
+      width: 70px;
+      background-color: #cccccc;
+    }
+  }
+
+  .about-us__graphic {
+    margin-bottom: 26px;
+  }
+
+  .main__subtitle span {
+    margin-left: 0px;
+    display: block;
+  }
+
+  .main__subtitle {
+    font-size: 20px;
+    line-height: 26px;
   }
 }
