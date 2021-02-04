@@ -70,8 +70,37 @@ $(function () {
     slidesToShow: 5,
     slidesToScroll: 3,
     arrows: false,
-    dots: true
-  })
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
+  });
 
 
   $('.fancybox-media').fancybox({
