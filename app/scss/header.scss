@@ -24,9 +24,17 @@
 }
 
 .header {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   min-height: 600px;
+  
 }
+
+.header-slider{
+  .slick-slide.slick-current.slick-active{
+    width: 100vw !important;
+  }
+}
+
 
 .header-slider__item {
   height: 100vh;
@@ -316,7 +324,7 @@
 
   .header__arrows {
     left: 50%;
-    bottom: 9px;
+    bottom: -29px;
   }
 }
 

@@ -292,6 +292,8 @@ calc(100);
 
 const getSmoothScroll = () => {
   const menu = document.querySelector('.menu'),
+    menuList = document.querySelector('.menu__list'),
+    headerBurger = document.querySelector('.header__burger'),
     ancors = menu.querySelector('ul').querySelectorAll('a'),
     btnDown = document.querySelector('.header__arrows-btn');
 
@@ -303,11 +305,15 @@ const getSmoothScroll = () => {
         behavior: 'smooth',
         block: 'start'
       })
+      if (menuList.classList.contains('menu__list--open')) {
+        menuList.classList.remove('menu__list--open');
+        headerBurger.classList.remove('header__burger--active');
+      }
     })
   }
 
   ancors.forEach((item) => {
-    getScroll(item)
+    getScroll(item);
   });
   getScroll(btnDown);
 }
@@ -360,3 +366,56 @@ headerBurger.addEventListener('click', () => {
   menuList.classList.toggle('menu__list--open');
 
 })
+
+
+//Отправка формы
+
+const forms = document.querySelectorAll('._form');
+console.log('hi');
+const message = {
+  loading: 'images/icons/spinner.svg',
+  success: 'Спасибо! Скоро мы с вами свяжемся',
+  failure: 'Что-то пошло не так...'
+};
+
+forms.forEach(item => {
+  postData(item);
+});
+
+function postData(form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let statusMessage = document.createElement('img');
+    statusMessage.src = message.loading;
+    statusMessage.style.cssText = `
+         display: block;
+         margin: 0 auto;
+     `;
+    form.insertAdjacentElement('afterend', statusMessage);
+
+    const request = new XMLHttpRequest();
+    request.open('POST', 'server.php');
+    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    const formData = new FormData(form);
+
+    const object = {};
+    formData.forEach(function (value, key) {
+      object[key] = value;
+    });
+    const json = JSON.stringify(object);
+
+    request.send(json);
+
+    request.addEventListener('load', () => {
+      if (request.status === 200) {
+        console.log(request.response);
+        alert(message.success);
+        statusMessage.remove();
+        form.reset();
+      } else {
+        alert(message.failure);
+      }
+    });
+  });
+}
