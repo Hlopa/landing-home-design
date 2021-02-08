@@ -26,15 +26,13 @@
 .header {
   // overflow-x: hidden;
   min-height: 600px;
-  
 }
 
-.header-slider{
-  .slick-slide.slick-current.slick-active{
+.header-slider {
+  .slick-slide.slick-current.slick-active {
     width: 100vw !important;
   }
 }
-
 
 .header-slider__item {
   height: 100vh;
