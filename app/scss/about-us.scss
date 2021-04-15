@@ -16,22 +16,26 @@
   position: relative;
 }
 
+.about-us__img-item
+{height:100%;
+  width:100%
+}
+
 .about-us__img {
   max-height: 400px;
   height: 100%;
   display: flex;
   align-items: flex-start;
   img {
-    height: 60%;
-    width: auto;
-    max-width: 49%;
+    height: 100%;
+    width: 95%;
     object-fit: cover;
   }
-  .about-us__images--1 {
-    margin-right: 23px;
-    height: 100%;
+  .about-us__images--2 {
+    height: 60%;
   }
 }
+
 
 .about-us__text {
   color: #828282;

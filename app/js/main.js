@@ -1,5 +1,8 @@
 'use scrict';
 
+document.addEventListener("DOMContentLoaded", ()=> {
+
+
 $(function () {
 
   $('.header-slider').slick({
@@ -113,6 +116,13 @@ $(function () {
 
 });
 
+
+
+
+
+setInterval(()=> {
+
+
 //скролл и анимация
 
 let isScrolling = false;
@@ -211,7 +221,9 @@ function scrolling(e) {
 }
 
 
-//калькулятор
+
+
+  //калькулятор
 
 const calc = (price = 100) => {
   const priceSection = document.querySelector('.price'),
@@ -321,6 +333,9 @@ const getSmoothScroll = () => {
 getSmoothScroll();
 
 
+
+
+
 //popup
 
 const togglePopup = () => {
@@ -426,5 +441,10 @@ function postData(form) {
 //маска для форм
 
 let selector = document.querySelectorAll('input[type=tel]');
-  let im = new Inputmask('+7 (999) 999-99-99');
-  im.mask(selector);
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(selector);
+    
+}, 2000 );
+
+})
+
